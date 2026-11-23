@@ -11,7 +11,9 @@ Riot skins, chromas and custom looks for League of Legends, ready from champion 
   <a href="https://github.com/frilo369/Umbra/issues"><img alt="Help and feedback" src="https://img.shields.io/badge/Help_%26_feedback-Open_an_issue-26364d?style=for-the-badge"></a>
 </p>
 
-<p align="center"><img src="docs/images/lobby.webp" alt="Umbra's gold and navy lobby, with a personal profile, recent icons and buttons to create or join a party" width="100%"></p>
+<p align="center"><img src="docs/images/lobby.webp" alt="Umbra 5.2 in the Eclipse design, with the Eclipse Ruins background, profile, Create Party and Find Party" width="100%"></p>
+
+**Current release: [Umbra 5.2](https://github.com/frilo369/Umbra/releases/tag/v5.2)** · 23 November 2026. This release improves the first connection to LTK Manager and makes repeated Riot skin audio builds consistent.
 
 ## A new look, a familiar game
 
@@ -19,33 +21,45 @@ Riot skins, chromas and custom looks for League of Legends, ready from champion 
 | :--- | :--- |
 | **Pick your look** | Browse Riot skins and chromas, search by name, or roll a random pick in the champion-select drawer. |
 | **Go custom** | Use the custom catalogue, browse Divine Skins, add your own `.fantome` / `.modpkg` packages, and keep optional custom mods enabled across matches. |
-| **Bring your friends** | Create a party or join with a short code. Coordinate supported skin picks, see preparation status, and use Stealth to hide selections from other members. |
-| **Keep a guide nearby** | Open the bundled Mayhem guide or MetaSRC with the guide shortcut, **F1** by default. |
-| **Make it yours** | Choose your theme and profile icon, remember your last skin per champion, and launch quietly in the tray. |
-| **Stay ready** | App updates wait for League and skin work to be idle. Separate database checks refresh custom content; diagnostics and local log exports help with problems. |
+| **Bring your friends** | Create a party or browse **Find Party**, which refreshes whenever you open it and while it stays open. Coordinate supported picks, see preparation status, and use Stealth to hide your selections. If the host leaves, a remaining member takes over. |
+| **Keep a guide nearby** | Press **F1** by default for the bundled ARAM Mayhem guide or themed MetaSRC builds in Arena, ARAM and Ranked. Builds already viewed on a MetaSRC page reopen quickly. |
+| **Make it yours** | Choose the **Default** or **Eclipse** interface, built-in backgrounds or your own images, and a custom asset colour with a live preview and eyedropper. Each design remembers its background; each background remembers its colour. |
+| **Stay ready** | App updates wait for League and skin work to be idle. Separate database checks refresh custom content; Send logs gives you a four-character support code. |
 
 <p align="center"><img src="docs/images/skins.webp" alt="Ahri skin selection in Umbra, showing Star Guardian, Spirit Blossom, K/DA ALL OUT and Coven, with search, Random and Party controls" width="100%"></p>
 
+<p align="center"><img src="docs/images/party.webp" alt="Umbra 5.2 Eclipse party with four sample members, full-card skin artwork, host and preparation indicators" width="100%"></p>
+
 <table>
   <tr>
-    <td width="50%" align="center"><strong>A party at a glance</strong></td>
-    <td width="50%" align="center"><strong>Your preferences, in one place</strong></td>
+    <td width="50%" align="center"><strong>The Default design</strong></td>
+    <td width="50%" align="center"><strong>Two complete interface designs</strong></td>
   </tr>
   <tr>
-    <td><a href="docs/images/party.webp"><img src="docs/images/party.webp" alt="Sample Umbra party with four members, their selected skins and readiness indicators" width="100%"></a></td>
-    <td><a href="docs/images/settings.webp"><img src="docs/images/settings.webp" alt="Umbra settings with startup preferences, guide shortcut, updates, diagnostics and profile import" width="100%"></a></td>
+    <td><a href="docs/images/default-lobby.webp"><img src="docs/images/default-lobby.webp" alt="Umbra 5.2 Default lobby with ornate silver frames, ruby accents and the Umbra Eclipse background" width="100%"></a></td>
+    <td><a href="docs/images/themes.webp"><img src="docs/images/themes.webp" alt="Themes panel with Default and Eclipse interface designs" width="100%"></a></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Your backdrop</strong></td>
+    <td align="center"><strong>Your preferences and support</strong></td>
+  </tr>
+  <tr>
+    <td><a href="docs/images/backgrounds.webp"><img src="docs/images/backgrounds.webp" alt="Background gallery with built-in artwork, image import and separate asset colour controls" width="100%"></a></td>
+    <td><a href="docs/images/settings.webp"><img src="docs/images/settings.webp" alt="Umbra 5.2 settings with startup preferences, guide shortcut, updates, Open database folder and Send logs" width="100%"></a></td>
   </tr>
 </table>
 
-<p align="center"><sub>Interface previews with sample selections and party members. Click the smaller images to see the details.</sub></p>
+<p align="center"><sub>Umbra 5.2 interface previews with sample selections and party members. Click the smaller images to see the details.</sub></p>
 
 ## Start in three steps
 
-1. **Download the full setup** from [Latest release](https://github.com/frilo369/Umbra/releases/latest): choose `Umbra-…-Setup.exe`, including for a first installation.
+1. **Download the full setup** from [Latest release](https://github.com/frilo369/Umbra/releases/latest): the current installer is **[Umbra-5.2-Setup.exe](https://github.com/frilo369/Umbra/releases/download/v5.2/Umbra-5.2-Setup.exe)**, including for a first installation.
 2. **Run setup.** You'll need 64-bit Windows 10/11, League of Legends, and internet for any missing prerequisites. Setup installs WebView2 and LTK Manager when needed; LTK may ask for administrator permission and licence acceptance.
-3. **Open Umbra before you queue.** In champion select, open the skin drawer and double-click a skin to enable it. For Party, everyone opens Umbra and joins the same room.
+3. **Open Umbra before you queue.** In champion select, open the skin drawer and double-click a skin to enable it. For Party, one person chooses **Create Party**; friends use **Find Party** and search for the host's name.
 
 Umbra itself runs with your normal Windows permissions. To update, use **Settings → Check for updates**, or install the latest full setup. Your settings and skin library are preserved.
+
+Open **Themes** in the top-left toolbar to change your background, asset colour or interface design. **Settings** also lets you change the guide shortcut, remember your last skin per champion and launch quietly in the tray.
 
 <details>
 <summary><strong>A few things worth knowing</strong></summary>
@@ -53,14 +67,14 @@ Umbra itself runs with your normal Windows permissions. To update, use **Setting
 **Who sees the skins?**  
 Solo changes are local to your game and do not unlock purchases on your Riot account. Party coordinates supported picks between compatible Umbra clients. Private Local skins use a shareable stand-in for friends, rather than transferring your private package.
 
-**Already have a library?**  
-Settings can preview and copy supported settings, profiles and libraries from Friloverse or Divinity, plus a FrYiLoCo custom library. Source files stay in place, and conflicting packages are preserved.
+**Have your own packages?**<br>
+Open **Local Skins** from Custom Mods, then put your `.fantome` or `.modpkg` file in its champion's folder. Umbra keeps its own settings and library separate from other skin apps.
 
 **What about Windows warnings?**  
 Current releases are unsigned, so Windows or antivirus software may warn. Download only from this repository's Releases and compare the supplied SHA-256 checksums. A checksum is not a publisher signature or a guarantee of safety; report detections rather than disabling protection.
 
 **Need help?**  
-Check **Settings → Troubleshooting**, run diagnostics, or export a local log ZIP. [Open an issue](https://github.com/frilo369/Umbra/issues) with your Umbra version and what happened; review logs before sharing them.
+Choose **Settings → Send logs**, optionally add what happened, then give the four-character report code to the person helping you. This uploads a redacted Umbra and LTK Manager log report only when you click; reports are kept for 90 days. [Open an issue](https://github.com/frilo369/Umbra/issues) with your Umbra version and what happened.
 
 </details>
 
