@@ -6,14 +6,12 @@
 Riot skins, chromas and custom looks for League of Legends, ready from champion select.</p>
 
 <p align="center">
-  <a href="https://github.com/frilo369/Umbra/releases/latest"><img alt="Download Umbra for Windows" src="https://img.shields.io/badge/Download_Umbra-Windows-ae1236?style=for-the-badge&logo=windows&logoColor=white"></a>
-  <a href="https://github.com/frilo369/Umbra/releases"><img alt="Latest release" src="https://img.shields.io/github/v/release/frilo369/Umbra?style=for-the-badge&color=cabfb1&label=Latest"></a>
+  <a href="https://github.com/frilo369/Umbra/releases/latest/download/Umbra-Setup.exe"><img alt="Download the latest Umbra setup for Windows" src="https://img.shields.io/badge/Download_Umbra-Windows-ae1236?style=for-the-badge&logo=windows&logoColor=white"></a>
+  <a href="https://github.com/frilo369/Umbra/releases/latest"><img alt="What's new" src="https://img.shields.io/badge/What%27s_new-Updates-cabfb1?style=for-the-badge"></a>
   <a href="https://github.com/frilo369/Umbra/issues"><img alt="Help and feedback" src="https://img.shields.io/badge/Help_%26_feedback-Open_an_issue-392b30?style=for-the-badge"></a>
 </p>
 
-<p align="center"><img src="docs/images/lobby.webp" alt="Umbra 5.2 lobby with ornate silver frames, ruby accents, profile, Create Party and Find Party" width="100%"></p>
-
-**Current release: [Umbra 5.2](https://github.com/frilo369/Umbra/releases/tag/v5.2)** · 23 November 2026. This release improves the first connection to LTK Manager and makes repeated Riot skin audio builds consistent.
+<p align="center"><img src="docs/images/lobby.webp" alt="Umbra lobby with ornate silver frames, ruby accents, profile, Create Party and Find Party" width="100%"></p>
 
 ## A new look, a familiar game
 
@@ -28,7 +26,7 @@ Riot skins, chromas and custom looks for League of Legends, ready from champion 
 
 <p align="center"><img src="docs/images/skins.webp" alt="Ahri skin selection in Umbra, showing Star Guardian, Spirit Blossom, K/DA ALL OUT and Coven, with search, Random and Party controls" width="100%"></p>
 
-<p align="center"><img src="docs/images/party.webp" alt="Umbra 5.2 party with silver frames, ruby accents, four sample members, selected skins, host and preparation indicators" width="100%"></p>
+<p align="center"><img src="docs/images/party.webp" alt="Umbra party with silver frames, ruby accents, four sample members, selected skins, host and preparation indicators" width="100%"></p>
 
 <table>
   <tr>
@@ -41,13 +39,13 @@ Riot skins, chromas and custom looks for League of Legends, ready from champion 
   </tr>
 </table>
 
-<p align="center"><img src="docs/images/settings.webp" alt="Umbra 5.2 settings with silver frames, startup preferences, guide shortcut, updates, Open database folder and Send logs" width="100%"></p>
+<p align="center"><img src="docs/images/settings.webp" alt="Umbra settings with silver frames, startup preferences, guide shortcut, updates, Open database folder and Send logs" width="100%"></p>
 
-<p align="center"><sub>Umbra 5.2 interface previews in the Umbra Default theme, with sample selections and party members. Click the smaller images to see the details.</sub></p>
+<p align="center"><sub>Interface previews in the Umbra Default theme, with sample selections and party members. Click the smaller images to see the details.</sub></p>
 
 ## Start in three steps
 
-1. **Download the full setup** from [Latest release](https://github.com/frilo369/Umbra/releases/latest): the current installer is **[Umbra-5.2-Setup.exe](https://github.com/frilo369/Umbra/releases/download/v5.2/Umbra-5.2-Setup.exe)**, including for a first installation.
+1. **[Download Umbra for Windows](https://github.com/frilo369/Umbra/releases/latest/download/Umbra-Setup.exe).** This always downloads the latest full setup, including for a first installation. [See what's new and checksums](https://github.com/frilo369/Umbra/releases/latest).
 2. **Run setup.** You'll need 64-bit Windows 10/11, League of Legends, and internet for any missing prerequisites. Setup installs WebView2 and LTK Manager when needed; LTK may ask for administrator permission and licence acceptance.
 3. **Open Umbra before you queue.** In champion select, open the skin drawer and double-click a skin to enable it. For Party, one person chooses **Create Party**; friends use **Find Party** and search for the host's name.
 
@@ -71,6 +69,11 @@ Current releases are unsigned, so Windows or antivirus software may warn. Downlo
 Choose **Settings → Send logs**, optionally add what happened, then give the four-character report code to the person helping you. This uploads a redacted Umbra and LTK Manager log report only when you click; reports are kept for 90 days. [Open an issue](https://github.com/frilo369/Umbra/issues) with your Umbra version and what happened.
 
 </details>
+
+<p align="center">
+  <a href="https://github.com/frilo369/Umbra/releases/latest/download/Umbra-Setup.exe"><img alt="Download the latest Umbra setup for Windows" src="https://img.shields.io/badge/Download_latest_setup-Windows-ae1236?style=for-the-badge&logo=windows&logoColor=white"></a><br>
+  <sub>Download, run setup, and open Umbra.</sub>
+</p>
 
 ---
 

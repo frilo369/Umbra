@@ -1,0 +1,79 @@
+# Publish this file as .github/workflows/latest-setup.yml in frilo369/Umbra.
+name: Latest setup download
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: latest-setup-${{ github.event.release.tag_name || 'latest' }}
+  cancel-in-progress: false
+
+jobs:
+  setup-download:
+    if: github.event_name == 'workflow_dispatch' || (!github.event.release.draft && !github.event.release.prerelease)
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      RELEASE_TAG: ${{ github.event.release.tag_name }}
+    steps:
+      - name: Verify and attach the fixed-name installer
+        shell: python
+        run: |
+          import hashlib
+          import json
+          import os
+          import pathlib
+          import re
+          import subprocess
+          import tempfile
+
+          def gh(*args):
+              return subprocess.check_output(["gh", *args], text=True)
+
+          tag = os.environ.get("RELEASE_TAG", "")
+          if tag and not re.fullmatch(r"v[1-9][0-9]*\.[0-9]", tag):
+              raise SystemExit("Unexpected release tag")
+          endpoint = f"repos/{os.environ['GH_REPO']}/releases/"
+          release = json.loads(gh("api", endpoint + (f"tags/{tag}" if tag else "latest")))
+          if release["draft"] or release["prerelease"]:
+              raise SystemExit("Only stable published installers get a download alias")
+          tag = release["tag_name"]
+          if not re.fullmatch(r"v[1-9][0-9]*\.[0-9]", tag):
+              raise SystemExit("Unexpected release tag")
+          name = f"Umbra-{tag[1:]}-Setup.exe"
+          assets = {asset["name"]: asset for asset in release["assets"]}
+          source = assets[name]
+          if source["state"] != "uploaded":
+              raise SystemExit("Installer upload is incomplete")
+          with tempfile.TemporaryDirectory() as folder:
+              gh("release", "download", tag, "--pattern", name,
+                 "--pattern", "SHA256SUMS.txt", "--dir", folder)
+              root = pathlib.Path(folder)
+              data = (root / name).read_bytes()
+              digest = hashlib.sha256(data).hexdigest()
+              checksums = (root / "SHA256SUMS.txt").read_text(encoding="utf-8").splitlines()
+              expected = f"{digest}  {name}"
+              if expected not in checksums or len(data) != source["size"]:
+                  raise SystemExit("Installer does not match its published checksum/size")
+              if source.get("digest") != f"sha256:{digest}":
+                  raise SystemExit("Installer does not match GitHub's asset digest")
+              alias = assets.get("Umbra-Setup.exe")
+              if alias:
+                  if alias.get("digest") != f"sha256:{digest}" or alias["size"] != len(data):
+                      raise SystemExit("Existing download alias differs; refusing to overwrite")
+                  print(f"{tag}: download alias already verified")
+              else:
+                  setup = root / "Umbra-Setup.exe"
+                  setup.write_bytes(data)
+                  gh("release", "upload", tag, str(setup))
+                  updated = json.loads(gh("api", endpoint + f"tags/{tag}"))
+                  uploaded = [a for a in updated["assets"] if a["name"] == "Umbra-Setup.exe"]
+                  if len(uploaded) != 1 or uploaded[0].get("digest") != f"sha256:{digest}" or uploaded[0]["size"] != len(data):
+                      raise SystemExit("Uploaded alias identity could not be verified")
+                  print(f"{tag}: attached verified Umbra-Setup.exe ({digest})")
